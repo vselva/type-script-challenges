@@ -14,20 +14,25 @@ myGender = 'Transgender';
 console.log(myGender);
 
 console.log('');
-console.log('==================== Union & Intersection ====================');
+console.log('==================== Union Type ====================');
 type nameType = { name: string };
 type ageType = { age: number };
 
 type Union = nameType | ageType;
+
+let unionVar1: Union = { name: 'Selva' }; // any one is allowed
+let unionVar2: Union = { age: 30 }; // any one is allowed
+let unionVar3: Union = { name: 'Selva', age: 30 }; // both also are allowed
+console.log(unionVar1);
+console.log(unionVar2);
+console.log(unionVar3);
+
+console.log('');
+console.log('==================== Intersection Type ====================');
 type Intersection = nameType & ageType;
 
-let unionVar1: Union = { name: 'Selva' } // any one is allowed
-let unionVar2: Union = { age: 30 } // any one is allowed
-let unionVar3: Union = { name: 'Selva', age: 30 } // both also are allowed
-console.log(unionVar1);
-
-let intersection1: Intersection = { name: 'Selva', age: 30 } // both must be there
-// let intersection2: Intersection = { name: 'Selva' } // this is not allowed
+let intersection1: Intersection = { name: 'Selva', age: 30 }; // both must be there
+// let intersection2: Intersection = { name: 'Selva' }; // this is not allowed
 console.log(intersection1);
 
 console.log('');
